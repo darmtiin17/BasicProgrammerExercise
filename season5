@@ -1,0 +1,68 @@
+print("============================================================")
+print("-----------------Welcome to the MuHaMa store----------------")
+print("============================================================")
+Admin = input("Admin : ")
+Date = input("Date : ")
+Time = input("Time : ")
+
+def fungsiMuHaMaStore():
+    global item
+    global purchased
+    global itm
+
+
+print("""
+========================================================
+MuHaMa Store
+Item Price List
+_______________
+1. Powder - Rp. 15.000
+2. Hand Body - Rp. 20.000
+3. Masker - Rp. 15.000
+4. Maskulin - Rp. 50.000
+5. MS. Glow - Rp. 100.000
+========================================================
+""")
+number=int(input("item : "))
+item=int(input("purchased :"))
+
+if number==1:
+    price=item*15.000
+    print(item, " Powder = Rp" , price)
+    itm=("Powder")
+elif number==2:
+    price=item*20.000
+    print(item, "Hand Body = Rp" , price)
+    itm=("Hand Body")
+elif number==3:
+    price=item*15.000
+    print("item, Masker = Rp" , price)
+    itm=("Masker")
+elif number==4:
+    price=item*50.000
+    print("item, Maskulin = Rp" , price)
+    itm=("Maskulin")
+elif number==5:
+    price=item*100.000
+    print("item, MS. Glow : Rp", price)
+else :
+    print("pilihann tidak ada, silahkan masukan lagi!!")
+
+    fungsiMuHaMaStore()
+    totalall=item+item
+
+    print("total harus dibayar : Rp" , totalall)
+    money=int(input("uang tunai pembeli: Rp "))
+    kembalian=int(money-totalall)
+    print("kembalian : ", kembalian)
+
+print("""========== Purchase Receipt ==========
+======================================""")
+Buyer=input("buyer :")
+print("Buy :, ")
+print("tagihan : Rp", totalall)
+print("dibayar : Rp", money)
+print("kembalian : Rp", kembalian)
+
+
+
